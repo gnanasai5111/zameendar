@@ -1,0 +1,232 @@
+& .details-tab {
+  padding: 2% 0 6% 0;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  & .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & .ant-tag {
+      background-color: var(--primary-color);
+      color: var(--white);
+      border-radius: 50%;
+      border: 1px solid var(--primary-color);
+    }
+  }
+}
+
+.form-content-property {
+  & .ant-form-item {
+    padding: 2% 0;
+    align-items: center;
+    background-image: linear-gradient(
+      to right,
+      #8f8f8f 33%,
+      rgba(143, 143, 143, 0) 0%
+    );
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+    margin: 0;
+    & .ant-form-item-control {
+      flex: 100%;
+    }
+    & .ant-form-item-row {
+      & .ant-form-item-label {
+        text-align: left;
+
+        & .form-label {
+          white-space: wrap;
+          padding-right: 3%;
+          & h6 {
+            font-weight: 500;
+            position: relative;
+            white-space: nowrap;
+          }
+          & p {
+            color: var(--not-used-color);
+            margin-top: 0.5rem;
+          }
+        }
+        & .ant-form-item-required {
+          & h6::after {
+            display: inline-block;
+            margin-inline-end: 4px;
+            color: #ff4d4f;
+            font-size: 14px;
+            font-family: SimSun, sans-serif;
+            line-height: 1;
+            visibility: visible;
+            content: "*";
+            position: absolute;
+          }
+        }
+        & label {
+          height: 100%;
+          align-items: flex-start;
+        }
+        & label::after {
+          display: none;
+        }
+        & .ant-form-item-required::before {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+// amenities
+.amenities-wrapper {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  flex-wrap: wrap;
+  gap: 10px;
+  & .checked-item {
+    border: var(--inputborder);
+
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: var(--black);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    & svg {
+      margin-right: 0.5rem;
+    }
+    &.active {
+      background-color: var(--darkblack);
+      color: var(--white);
+    }
+  }
+}
+.select-option-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  & .item {
+    border: var(--inputborder);
+    padding: 5px 20px;
+    border-radius: 15px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  & .item.active {
+    background-color: var(--secondary-color);
+    border: 0;
+    color: var(--white);
+  }
+}
+
+.add-amenities {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.amenities-modal {
+  & .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & input {
+      margin: 2rem;
+    }
+
+    & h6 {
+      font-weight: 500;
+      color: var(--black);
+    }
+  }
+}
+
+.upload-box {
+  & .wrapper {
+    margin: 2rem 0;
+    border: 1px dotted #8f8f8f;
+    padding: 8% 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    & .first-row {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      & svg {
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 50%;
+        font-size: 1rem;
+        padding: 3px;
+        margin-right: 3px;
+      }
+      & h6 {
+        font-weight: 500;
+      }
+    }
+    & p {
+      color: var(--not-used-color);
+    }
+  }
+}
+.upload-container {
+  & .images-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    & .empty-case {
+      border-radius: 8px;
+      color: var(--primary-color);
+      text-align: center;
+      width: 100%;
+    }
+    & .img-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 8px;
+      margin-right: 8px;
+      & .img-wrap {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        min-height: 120px;
+
+        border: var(--border);
+        border-bottom: 0;
+        position: relative;
+        border-radius: 8px 8px 0 0;
+        & img {
+          display: block;
+          width: 100%;
+          padding: 8px;
+          cursor: pointer;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      & .ant-select {
+        width: 120px;
+        & .ant-select-selector {
+          height: 2rem !important;
+          border-radius: 0 0 8px 8px;
+        }
+      }
+      & .delete {
+        & svg {
+          color: var(--error);
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          transition: transform 0.1s ease-in;
+        }
+        & svg:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

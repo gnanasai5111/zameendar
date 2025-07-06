@@ -1,0 +1,39 @@
+.property-details-wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f7fb;
+  & .property-details-content {
+    margin: 20px auto;
+    width: 80%;
+  }
+  & .gallery {
+    & .property-text {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & h4 {
+        color: #2d2d2d;
+      }
+      & p {
+        color: var(--not-used-color);
+      }
+      & .contact-seller {
+        background-color: var(--primary-color);
+        color: var(--white);
+        height: 2.5rem;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: 0;
+        border: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  & .property-details-content {
+    width: 95% !important;
+  }
+}

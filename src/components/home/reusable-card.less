@@ -1,0 +1,101 @@
+.reusable-card-container {
+  background-color: #fff;
+  cursor: pointer;
+
+  & .each-card {
+    display: flex;
+    border: 1px solid #eee;
+    margin-right: 20px;
+    width: 300px;
+    flex-direction: column;
+    & .card-img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+    & .img-container {
+      width: 100%;
+      height: 200px;
+    }
+    & .text-container {
+      padding: 1rem;
+      width: 100%;
+    }
+    & .card-wrapper {
+      & .area {
+        color: var(--not-used-color);
+        color: var(--not-used-color);
+        margin-top: 0.3rem;
+      }
+      & .rate {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        height: 1.2rem;
+      }
+      & .status {
+        font-weight: 300;
+      }
+      & .ant-progress {
+        width: 70%;
+      }
+      & .types {
+        color: var(--secondary-color);
+      }
+      & .read-more {
+        color: var(--not-used-color);
+        margin: 1rem 0;
+        & .read-more-link {
+          color: var(--primary-color);
+        }
+      }
+    }
+    & .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: var(--border);
+      padding-top: 1rem;
+      & .seller {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        & .logo {
+          height: 30px;
+          width: 30px;
+          display: flex;
+          align-items: center;
+          background-color: var(--darkblack);
+          justify-content: center;
+          border-radius: 50%;
+          margin-right: 5px;
+          color: #fff;
+        }
+      }
+      & .ant-btn {
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color);
+        // border: var(--secondary-border);
+        color: var(--white);
+      }
+    }
+  }
+}
+.buy-container:hover {
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1),
+    0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (max-width: 576px) {
+  & .reusable-card-container {
+    min-width: 80%;
+    margin-right: 20px;
+    & .each-card {
+      width: 100%;
+    }
+  }
+}

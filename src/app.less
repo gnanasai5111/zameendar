@@ -1,0 +1,227 @@
+:root {
+  --primary-text-color: #2d2d2d;
+  --secondary-text-color: #708090;
+  --input-color: #fdf0cd;
+  --input-text-color: #f5c53f;
+  --input-box-shadow: 0 0 0 2px #fceec5;
+  --input-focused-border-color: #f9ac39;
+
+  --black: #000000;
+  --darkblack: #222222;
+  --darkborder: 1px solid #222222;
+  --white: #ffffff;
+  --border: 1px solid #eaeaea;
+  --inputborder: 1px solid #b0b0b0;
+
+  --primary-background-color: #fff7e6;
+  --primary-border: 1px solid #ffb300;
+  --primary-color: #ffb300;
+  --secondary-border: 1px solid #41c34c;
+  --secondary-color: #41c34c;
+  --seconday-background-color: rgba(236, 249, 237, 255);
+  --not-used-color: #8f8f8f;
+  --error: #ff4d4f;
+}
+
+* {
+  font-family: Roboto, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+.content-wrapper-container.auth {
+  margin-top: 70.8px;
+}
+
+.ant-input {
+  background-color: var(--white);
+  height: 2.5rem;
+  border: var(--inputborder);
+  border-radius: 6px;
+}
+.ant-input-affix-wrapper {
+  background-color: var(--white);
+  height: 2.5rem;
+  border: var(--inputborder);
+  border-radius: 6px;
+  & input {
+    height: 100%;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+  }
+}
+.ant-input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+.small-input {
+  background-color: var(--white);
+  height: 2.5rem;
+  border: var(--inputborder);
+  border-radius: 6px;
+  width: 30%;
+  margin-right: 2%;
+}
+
+// custom select
+& .ant-select,
+.ant-select-single {
+  width: 100%;
+  height: 100%;
+  & .ant-select-selector {
+    border: var(--inputborder) !important;
+    height: 2.5rem !important;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    & .ant-select-selection-search {
+      & input {
+        height: 100% !important;
+      }
+    }
+    & .ant-select-selection-placeholder {
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  & svg {
+    color: #eaeaea;
+  }
+}
+& .ant-drawer {
+  z-index: 1010;
+}
+//  custome select dropdown list
+.ant-select-item-option {
+  margin: 0.2rem 0;
+}
+.ant-select-item-option-selected {
+  background-color: var(--primary-background-color) !important;
+  & .ant-select-item-option-state {
+    & svg {
+      color: var(--primary-color);
+    }
+  }
+}
+.ant-picker {
+  border: var(--inputborder);
+  height: 2.5rem;
+}
+.ant-radio-checked {
+  & .ant-radio-inner {
+    background-color: var(--darkblack) !important;
+    border-color: var(--darkblack) !important;
+  }
+}
+
+// chrome autofill color
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px white inset !important;
+}
+
+// Headings
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+p {
+  font-size: 0.9rem;
+}
+span {
+  font-size: 0.8rem;
+}
+
+hr {
+  border: var(--border);
+}
+
+// icons
+.anticon svg {
+  // color: #eaeaea;
+  color: var(--darkblack);
+}
+
+//buttons
+
+& .primary-button {
+  width: 100%;
+  background-color: var(--primary-color);
+  outline: 0;
+  border-radius: 6px;
+  height: 2.5rem;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & span {
+    font-size: 1rem;
+    color: var(--white);
+  }
+}
+
+.back-btn {
+  background-color: var(--primary-color);
+  outline: 0;
+  border-radius: 6px;
+  height: 2.5rem;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & span {
+    font-size: 1rem;
+    color: var(--white);
+  }
+}
+
+.next-btn {
+  background-color: #41c34c;
+  outline: 0;
+  border-radius: 6px;
+  height: 2.5rem;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & span {
+    font-size: 1rem;
+    color: var(--white);
+  }
+}
+
+.error {
+  color: var(--error);
+}
+
+.ant-modal-root {
+  z-index: 10000;
+  position: relative;
+}

@@ -1,0 +1,99 @@
+.pg-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  & .pg-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & .checked-item {
+      border-radius: 6px;
+      border: var(--inputborder);
+      padding: 0 10px;
+      height: 2.5rem;
+      white-space: nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    & .checked-item.active {
+      color: var(--white);
+      background-color: var(--secondary-color);
+      border: 0;
+    }
+  }
+}
+.pg-forms {
+  max-height: 50vh;
+  overflow: auto;
+  margin-top: 10px;
+  border: var(--border);
+  border-radius: 5px;
+  padding: 10px;
+  .pg-form-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    & .input-wrapper {
+      border: var(--border);
+      border-radius: 5px;
+      margin-top: 10px;
+      width: 250px;
+      & .header {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(242, 243, 248);
+        color: var(--darkblack);
+        & svg {
+          color: var(--error);
+          cursor: pointer;
+        }
+      }
+      & .content-forms {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+        & .ant-upload.ant-upload-select,
+        .ant-upload-list-item-container {
+          width: 100% !important;
+        }
+        & .ant-btn {
+          color: var(--secondary-color);
+          border: var(--secondary-border);
+          font-size: 0.8rem;
+          outline: 0;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+& .add-more {
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.pg-forms::-webkit-scrollbar {
+  width: 3px;
+}
+
+.pg-forms::-webkit-scrollbar-track {
+  background-color: #f2f3f8;
+}
+
+.pg-forms::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}

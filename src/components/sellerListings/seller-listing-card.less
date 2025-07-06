@@ -1,0 +1,202 @@
+.listing-card {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  & .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    background-color: var(--seconday-background-color);
+    & .rera-id {
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      & p {
+        color: grey;
+        margin-top: 0.3rem;
+        font-size: 0.9rem;
+        & span {
+          color: var(--secondary-color);
+          font-size: 0.9rem;
+        }
+      }
+    }
+    & .edit-delete {
+      display: flex;
+      align-items: center;
+      & .anticon-edit {
+        & svg {
+          color: var(--primary-color);
+          font-size: 1rem;
+          cursor: pointer;
+        }
+      }
+      & .anticon-delete {
+        margin: 0 10px;
+        & svg {
+          color: var(--error);
+          font-size: 0.9rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  & .content-container {
+    display: flex;
+    flex-direction: row;
+
+    & .img-container {
+      width: 40%;
+      min-width: 40%;
+      height: 175px;
+      & .card-img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    & .text-container {
+      padding: 1rem;
+      & .card-wrapper {
+        & .ant-row {
+          margin-top: 1rem;
+        }
+        & .name {
+          font-size: 1.3rem;
+        }
+        & .area {
+          color: var(--not-used-color);
+          margin-top: 0.3rem;
+        }
+        & .rate {
+          display: flex;
+          align-items: center;
+          height: 1.2rem;
+        }
+        & .types {
+          color: var(--secondary-color);
+        }
+        & .views {
+          font-size: 0.9rem;
+          color: grey;
+          & svg {
+            color: grey;
+            font-size: 0.9rem;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+  & .footer {
+    & .first-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #eee;
+      padding: 10px;
+
+      & .dates {
+        & .published {
+          font-family: 1rem;
+          color: #00be5e;
+          font-weight: 600;
+          line-height: normal;
+        }
+        & .expired {
+          font-size: 0.9rem;
+          color: #666;
+        }
+      }
+      & .view-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        & .views {
+          color: var(--primary-color);
+          font-size: 1rem;
+          margin-right: 10px;
+          & svg {
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-right: 0.3rem;
+          }
+        }
+        & .view-property {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          height: 30px;
+          padding: 0 10px;
+          border: var(--primary-border);
+          color: var(--primary-color);
+          border-radius: 6px;
+        }
+      }
+    }
+    & .last-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #eee;
+      background-color: var(--primary-background-color);
+      padding: 10px;
+      & .plans {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        & .plan {
+          & p {
+            color: grey;
+          }
+          & div {
+            color: var(--primary-color);
+            font-size: 1rem;
+          }
+        }
+        & svg {
+          color: var(--primary-color);
+          font-size: 1rem;
+          margin-right: 5px;
+        }
+      }
+
+      & .upgrade-wrapper {
+        background: var(--primary-color);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border-radius: 4px;
+        font-weight: 600;
+        white-space: nowrap;
+        padding: 0 10px;
+        cursor: pointer;
+        font-size: 12px;
+        & svg {
+          margin-right: 10px;
+          width: 25px;
+          height: 25px;
+          padding: 5px;
+          border-radius: 25px;
+          background: rgba(255, 255, 255, 0.2);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    flex-direction: column !important;
+    & .img-container {
+      width: 100% !important;
+    }
+  }
+}

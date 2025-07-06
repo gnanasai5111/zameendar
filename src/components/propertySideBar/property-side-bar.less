@@ -1,0 +1,38 @@
+.property-side-bar {
+  width: 45px;
+  border-right: 1px solid #eee;
+  height: calc(100vh - 140px);
+  position: relative;
+  position: fixed;
+  background-color: var(--white);
+  & .tab-icons-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    & .tab-item {
+      margin-bottom: 20px;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--darkblack);
+      & svg {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+    & .tab-item.active {
+      background-color: var(--darkblack);
+      border-radius: 6px;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .property-side-bar {
+    display: none;
+  }
+}

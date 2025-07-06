@@ -1,0 +1,109 @@
+& .properties-wrapper {
+  margin-top: 30px;
+  & .property-container {
+    padding: 0 2rem;
+    & .heading-title-container {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
+      & .property-main-title {
+        font-size: 2rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        font-family: Rozha One, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        color: var(--darkblack);
+      }
+      & p {
+        margin: 0;
+        line-height: 1;
+        font-size: 1rem;
+        color: #888;
+      }
+    }
+    & .heading-title-container::after {
+      content: "";
+      width: 50px;
+      height: 2px;
+      background: #222;
+      margin-left: -25px;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+    }
+    & .slider-container-wrapper {
+      position: relative;
+      & .left-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 50%;
+        left: -20px;
+        z-index: 1;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        transform: scale(1);
+        transition: transform 0.2s ease-in-out;
+        border: 0;
+        outline: 0;
+        & svg {
+          color: var(--white);
+        }
+      }
+      & .left-btn:hover,
+      .right-btn:hover {
+        transform: scale(1.05);
+      }
+      & .right-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 50%;
+        right: -20px;
+        border: 0;
+        outline: 0;
+        z-index: 1;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        transform: scale(1);
+        transition: transform 0.2s ease-in-out;
+        & svg {
+          color: var(--white);
+        }
+      }
+      & button:disabled {
+        display: none;
+      }
+    }
+
+    & .property-wrapper-slider {
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+      overflow-y: hidden;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .properties-wrapper {
+    & .left-btn,
+    .right-btn {
+      display: none !important;
+    }
+  }
+}

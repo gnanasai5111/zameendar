@@ -1,0 +1,51 @@
+
+.listings {
+  display: flex;
+  background-color: #f5f7fb;
+  & .listings-container {
+    width: 80%;
+    margin: 20px auto;
+    // background-color: ;
+    & .sort-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & p {
+        color: var(--not-used-color);
+        margin-top: 0.3rem;
+      }
+      & .ant-select {
+        width: 150px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .listings-container {
+    width: 90% !important;
+  }
+  .sort-box .ant-select{
+    width: 100px !important;
+  }
+}
+
+
+@media screen and (min-width: 576px) {
+  .desktop-filter {
+    display: block;
+  }
+  .mobile-filter {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .desktop-filter {
+    display: none;
+  }
+  .mobile-filter {
+    display: block;
+  }
+}

@@ -1,0 +1,94 @@
+& .side-bar {
+  height: calc(100vh - 70.8px);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+
+  & .side-bar-container {
+    background-color: var(--white);
+    border-right: 1px solid #eee;
+    box-shadow: 0 4px 18px 0 rgba(194, 200, 213, 0.3);
+    padding: 10px;
+    & .progress-circle {
+      position: relative;
+      padding: 8px;
+      & .progress {
+        & .ant-progress-inner {
+          height: 1.5rem !important;
+          width: 1.5rem !important;
+        }
+      }
+      & .dotted {
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 50%;
+        background-color: var(--primary-color);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    & .tab-item {
+      margin-bottom: 20px;
+      cursor: pointer;
+      padding: 8px;
+      color: var(--darkblack);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & svg {
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+    & .tab-item.active {
+      background-color: var(--darkblack);
+      border-radius: 6px;
+      color: #fff;
+    }
+  }
+  & .side-bar-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  & .side-bar {
+    & .side-bar-container {
+      width: 0;
+      transition: width 1s ease-in-out;
+      opacity: 0;
+      padding: 0;
+      display: none;
+    }
+    & .side-bar-container.active {
+      width: 100%;
+      opacity: 1;
+      display: block;
+      padding: 10px;
+    }
+    & .side-bar-mobile {
+      display: block;
+      padding: 8px;
+      width: 20px;
+      height: 100px;
+      background-color: var(--darkblack);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      cursor: pointer;
+      & svg {
+        color: var(--white);
+        height: 1.2rem;
+        width: 1.2rem;
+      }
+    }
+  }
+}

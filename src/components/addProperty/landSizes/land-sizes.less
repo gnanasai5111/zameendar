@@ -1,0 +1,58 @@
+.land-sizes-wrapper {
+  max-height: 30vh;
+  overflow: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & .land-size {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    border: var(--border);
+    border-radius: 5px;
+    margin-top: 10px;
+
+    & .content-box {
+      padding: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & svg {
+        color: var(--error);
+        margin-left: 10px;
+      }
+      & .ant-btn {
+        color: var(--secondary-color);
+        border: var(--secondary-border);
+        font-size: 0.8rem;
+        outline: 0;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.land-sizes-wrapper::-webkit-scrollbar {
+  width: 3px;
+}
+
+.land-sizes-wrapper::-webkit-scrollbar-track {
+  background-color: #f2f3f8;
+}
+
+.land-sizes-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.add-more {
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-size: 1rem;
+}

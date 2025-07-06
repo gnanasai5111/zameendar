@@ -1,0 +1,39 @@
+.overview-card {
+  box-shadow: -2px 2px 32px 0 #0000000a;
+  background-color: var(--white);
+  border-radius: 5px;
+  margin-top: 2rem;
+
+  & .header {
+    border-bottom: var(--border);
+    padding: 1rem;
+    & h4 {
+      color: var(--primary-color);
+    }
+  }
+  & .content {
+    padding: 0 1rem;
+    & .each-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 1rem 0;
+      & svg {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin-right: 5px;
+        color: #2d2d2d;
+        font-weight: 200;
+      }
+      & h6 {
+        color: var(--not-used-color);
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+      & p {
+        color: var(--black);
+        font-weight: 500;
+      }
+    }
+  }
+}

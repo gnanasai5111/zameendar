@@ -1,0 +1,159 @@
+.filter-modal {
+    max-width: 600px;
+    width: 100% !important;
+    & .ant-modal-content {
+      padding: 0;
+    }
+    & .header {
+      border-bottom: var(--border);
+      padding: 1rem;
+      color: var(--darkblack);
+      font-weight: 600;
+      text-align: center;
+      position: relative;
+      & .cancel-icon {
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        & svg {
+          color: var(--darkblack);
+        }
+      }
+    }
+    & .content {
+      height: 70vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 1rem;
+    }
+    & .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      padding: 1rem;
+      border-top: var(--border);
+      & .reset-btn {
+        text-decoration: underline;
+        color: var(--darkblack);
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      & .apply-btn {
+        background-color: var(--darkblack);
+        color: var(--white);
+        font-size: 1rem;
+        cursor: pointer;
+        height: 2.5rem;
+        padding: 0 20px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    & .row {
+      border-bottom: var(--border);
+      padding: 2rem 0;
+      & svg {
+        color: var(--darkblack);
+      }
+      & .ant-switch:hover {
+        background-color: var(--darkblack);
+      }
+      & .ant-switch-checked {
+        background-color: var(--darkblack);
+      }
+      & .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: var(--darkblack);
+        border: var(--darkborder);
+      }
+      & .ant-checkbox-checked:after {
+        border: 0;
+      }
+      & .ant-checkbox-wrapper {
+        & span:nth-child(2) {
+          font-size: 1rem;
+        }
+      }
+      & .ant-checkbox-wrapper-checked:hover .ant-checkbox-inner {
+        background-color: var(--darkblack) !important;
+        border: var(--darkborder) !important;
+      }
+  
+      & .title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 24px;
+        color: #222222;
+        margin-bottom: 1rem;
+      }
+      & .btns-grp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+  
+        border-radius: 12px;
+        & .btn {
+          width: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 2.5rem;
+          border: var(--inputborder);
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        & .btn:first-child {
+          border-top-left-radius: 12px;
+          border-bottom-left-radius: 12px;
+          border-right: var(--border);
+        }
+        & .btn:nth-child(2) {
+          border-top-right-radius: 12px;
+          border-bottom-right-radius: 12px;
+        }
+        & .btn.active {
+          background-color: var(--darkblack);
+          color: var(--white);
+          background-image: linear-gradient(
+            to bottom,
+            rgba(255 255 255/0.16),
+            rgba(255 255 255/0)
+          );
+        }
+      }
+      & .price-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        & .label {
+          color: #717171;
+          font-size: 1rem;
+          padding-left: 10px;
+        }
+        & .ant-input-number-affix-wrapper,
+        .ant-input-number {
+          width: 100%;
+        }
+        & .currency {
+          font-size: 1rem;
+          text-align: left;
+          padding-left: 10px;
+          color: var(--black);
+          font-weight: 400;
+        }
+      }
+      & .select-options-wrapper {
+        margin-top: 1rem;
+        & .inner-title {
+          color: var(--darkblack);
+          font-size: 1rem;
+          font-weight: 200;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  
